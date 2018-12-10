@@ -1,1 +1,48 @@
-hello word
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符--添加样式</title>
+    <script src="/lib/vue.js"></script>
+    <style>
+        .cler{
+    		height: 40px;
+    		widows: 5em;
+    		background-color:red; 
+    	}
+    	.clea{
+    		height: 40px;
+    		widows: 5em;
+    		background-color:red; 
+    	}
+    	.cleb{
+    		height: 40px;
+    		widows: 5em;
+    		background-color:blue; 
+    	}
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-bind:class="{'clea':true}">
+            <h4 v-text='msg' v-bind:style="{color:'blue','font-weight':200}"></h4>
+            <input type="text" v-model='msg'd>
+        </div>
+    </div>
+</body>
+<script>
+const vue = new Vue({
+    el: '#app',
+    data: {
+        msg: '你好',
+        flag:false,
+    },
+    methods: {
+
+    }
+});
+</script>
+
+</html>
